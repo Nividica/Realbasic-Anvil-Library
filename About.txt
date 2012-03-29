@@ -1,0 +1,9 @@
+Realbasic Anvil Library
+    Created By: Nividica
+    Summary: A set of classes that allows you to import data from minecraft region files.
+    Requirements: Realbasic, zlib1.dll, *.mca region files
+    Region File Version Supported: Anvil
+    Tested With Minecraft Version: 1.2.3
+    Additional functionality:
+        BlockMapper: Allows the use of a texturepack to create a top-down topography map and heightmap.
+        UnityExportTools: Allows the export of a region into Unity compatable files.
