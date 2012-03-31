@@ -88,4 +88,4 @@ Realbasic Anvil Library
         Convert a region to a heightmap, splatmap script, and texture files. Done~ish.
         Provide methods for creating the unity script. Done, needs some serious optimization in the output script.
         Provide a method for extracting the needed textures, In progress( saves all in the include list, not just the ones used)
-        
+        Provide a method for exporting minecraft structures to 3d objects, Planned
