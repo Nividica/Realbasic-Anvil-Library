@@ -1,0 +1,158 @@
+04/03/2012 Changes: ---------------------------------------------------------------------------------------------------
+
+    AnvilBlock
+        -Removed mParentSection
+        +Added PositionIn( Section, Chunk, Region, World )
+        /Done Calculate the ( world, region, chunk, section ) position(s)
+    
+    AnvilSection
+        -Removed mParentChunk
+        +Added PositionIn( Chunk, Region, World )
+        /Done Calculate the ( world, region, chunk ) position(s)
+        /Optimize, getBlock Added support for complier flags
+        
+    AnvilChunk
+        -Removed mParentRegion
+        +Added PositionIn ( Region, World )
+        +Added getHeightMapValue
+        +Added hasSection
+        /Done, Calculate the ( world, region ) position(s)
+        /Optmize, SplitNibbles uses divide rather than right shift( noticeably faster )
+        
+    AnvilRegion
+        +Added PositionInWorld
+        /Done Calculate the world position
+        /Optimize, GetChunk Added support for complier flags
+        
+    AnvilCoords
+        -Removed, BlockToWorld
+        -Removed, BlockToHeight
+        +Added, const kWorldHeight = 256
+        
+    Nibble
+        -Removed, Operator Overload Convert To String
+        +Added, toString
+        
+    BlockMapper
+        /Optimize, GetChunkTopo map now considers the chunks heightmap
+        /Bugfix, GetChunkTopo now catches BlockNotFoundException, as it seems the hightmap can be wrong
+        
+    +AnvilComplierFlags
+        +Added cFlagAnvilData
+        +Added cFlagAnvilSkyLight
+        +Added cFlagAnvilBlockLight
+        
+        
+    +RequiredFlagException
+        
+    +AnvilBiomes
+        
+    <General>
+        /Bugfix, Corrected Debugger Destination for current setup
+        /Bugfix, Check all section code, as sections are NOT gaurnteed to be contiguous
+        /Bugfix, Updated the world height to 256 ( was 128 )
+
+git commit -m 'Bugfixes: Section code can now handle gaps, GetChunkTopo catches BlockNotFoundException. Added: Custom Complier flags, Biome Data, Extended positions. Optimized: GetChunkTopo, GetChunk'
+
+
+
+03/29/12 Changes: -----------------------------------------------------------------------------------------------------
+
+RegionReader
+        /Done, Load a region file
+        /Done, Read region header
+        /Done, Read chunk information
+        /Done, Inflate chunk data (Thanks to Charles and zLib)
+        
+    NBT
+        /Done, Parse inflated chunk data
+        /Done, Convert NBT to Parent:Child nodes
+        /Done, Provide pathing
+        /Done, Add transparent support for 4bit data(nibble)
+        /Done, Add human readable export
+        
+    AnvilRegion
+        /Done, Provide an OO way to access chunks
+        /Done, Add ablility to open a file, and convert to AnvilRegion
+        /Done, Raise custom exception when a chunk can not be located
+        
+    AnvilChunk
+        /Done, Convert NBT to OO accessable data, In progress( Entities, and TileEntities are incomplete)
+        /Done, Provide easy way to access a block
+        /Done, Raise custom exception when a block can not be located
+        
+    AnvilSection
+        /Done, Store section data in sync arrays, Done
+        /Done, Provide easy way to access a block, Done
+        /Done, Raise custom exception when a block can not be located, Done
+        
+    AnvilBlock
+        /Done, Store block data, Done
+        /Done, Provide easy way to access the blocks position in the world, In progress( Could lead to NilObject errors)
+        /Done, Provide easy way to access the blocks height in the world, In progress( Could lead to NilObject errors)
+        
+    AnvilUnimplemented
+        /Done, Anything with this class means I have not converted to OO accessability
+        
+    AnvilCoords
+        /Done, Move all constants relating to location here, Done
+        
+    BlockIDs
+        /Done, Store all known block ID values, Done
+        /Done, Provide method for converting block ID to a string name, Done
+        /Done, Overload methods to accept both integer ID's OR AnvilBlock's, Done
+        
+    DataIDs
+        /Done, Store all known data values, In Progress (No where near done)
+        
+    BlockNotFoundException
+        /Done, Custom exception for cases when a block can not be found, Done
+        
+    ChunkNotFoundException
+        /Done, Custom exception for cases when a chunk can not be found, Done
+        
+    Position
+        /Done, Create an easy way to store X,Y,Z triplets, Done
+        
+    Nibble
+        /Done, Create a new data type to store 4 bits of numeric data, Done
+        /Done, Provide operator overloading for converting from other numeric types, Done
+        /Done, Provide operator overloading for converting to other numeric types, Done
+        
+    BlockMapper
+        /Done, Provide method for loading a texture pack, Done
+        /Done, Provide methods for coloring blocks from extended texture packs, In Progress (Grass only right now)
+        /Done, Provide methods for converting a block or blockID to a texture, Done
+        /Done, Provide methods for converting blocks with data sensitve information to texture, In Progress(Wool only)
+        /Done, Provide a method for getting the topography of a chunk, Done
+        /Done, Provide a method for getting the topography of a Region, Done
+        /Done, Allow custom inclusion list for topography, Done
+        /Done, Provide method for converting a topography to a gray-scale heightmap, Done
+        /Done, Provide method for converting a region to a gray-scale heightmap, Done
+        /Done, Add some realtime feedback for the conversion process. Done, but weird.
+        
+    RegionheightmapProgress
+        /Done, Create an event-centric way of providing feedback about the region heightmaping process. Done, but weird.
+        
+    TopographyMap
+        /Done, Store an XZ (BlockCoords) array of the topmost blocks( as provided from BlockMapper), Done
+        /Done, Provide an easy way of getting or setting the blocks, Done
+        
+    RegionTopography
+        /Done, Store an XZ (ChunkCoords) array of all the TopographyMaps in a region, Done
+        /Done, Provide an easy way of getting and setting the chunks, Done
+        
+    UnityExportTools
+        /Done, Convert a region to a heightmap, splatmap script, and texture files. Done~ish.
+        /Done, Provide methods for creating the unity script. Done, needs some serious optimization in the output script.
+
+
+
+
+
+
+
+
+
+
+
