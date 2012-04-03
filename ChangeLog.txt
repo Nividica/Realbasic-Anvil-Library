@@ -1,27 +1,79 @@
+        
+    + BlockTypeMismatchException
+        
+    +(Folder) BlockTypes
+        
+    + WoolBlock
+        +Added, Wool type constants
+        
+    + WoodBlock
+        +Added, Wood type constants
+        
+    + WoodenPlanksBlock
+        +Added, Plank type constants
+        
+    + FireBlock
+        
+    + LeavesBlock
+        +Added, Leaves type constants
+        
+    + JukeBoxBlock
+        +Added, Disc type constants
+        
+    + SaplingsBlocks
+        +Added, Sapling type constants
+        
+    + CactusBlock
+        +Added, Age constants
+        
+    + SugarCaneBlock
+        +Added, Age constants
+        
+    + WaterBlock
+        +Added, Maximum water level constant
+        
+    + LavaBlock
+        +Added, Lava level constants
+        
+    + Farmland
+        +Added, Wetness constants
+        
+    DataIDs
+        -Removed, Wool type constants
+        -Removed, Wood type constants
+        -Removed, Leaves type constants
+        -Removed, Disc type constants
+        
+    AnvilBiomes
+        /BugFix, Added missing constant 'Uncalculated'
+        
+    Nibble
+        /BugFix, Added operator overload divide
+        
 04/03/2012 Changes: ---------------------------------------------------------------------------------------------------
 
     AnvilBlock
-        -Removed mParentSection
-        +Added PositionIn( Section, Chunk, Region, World )
-        /Done Calculate the ( world, region, chunk, section ) position(s)
+        -Removed, mParentSection
+        +Added, PositionIn( Section, Chunk, Region, World )
+        /Done, Calculate the ( world, region, chunk, section ) position(s)
     
     AnvilSection
-        -Removed mParentChunk
-        +Added PositionIn( Chunk, Region, World )
-        /Done Calculate the ( world, region, chunk ) position(s)
+        -Removed, mParentChunk
+        +Added, PositionIn( Chunk, Region, World )
+        /Done, Calculate the ( world, region, chunk ) position(s)
         /Optimize, getBlock Added support for complier flags
         
     AnvilChunk
-        -Removed mParentRegion
-        +Added PositionIn ( Region, World )
-        +Added getHeightMapValue
-        +Added hasSection
+        -Removed, mParentRegion
+        +Added, PositionIn ( Region, World )
+        +Added, getHeightMapValue
+        +Added, hasSection
         /Done, Calculate the ( world, region ) position(s)
         /Optmize, SplitNibbles uses divide rather than right shift( noticeably faster )
         
     AnvilRegion
-        +Added PositionInWorld
-        /Done Calculate the world position
+        +Added, PositionInWorld
+        /Done, Calculate the world position
         /Optimize, GetChunk Added support for complier flags
         
     AnvilCoords
@@ -38,9 +90,9 @@
         /Bugfix, GetChunkTopo now catches BlockNotFoundException, as it seems the hightmap can be wrong
         
     +AnvilComplierFlags
-        +Added cFlagAnvilData
-        +Added cFlagAnvilSkyLight
-        +Added cFlagAnvilBlockLight
+        +Added, cFlagAnvilData
+        +Added, cFlagAnvilSkyLight
+        +Added, cFlagAnvilBlockLight
         
         
     +RequiredFlagException

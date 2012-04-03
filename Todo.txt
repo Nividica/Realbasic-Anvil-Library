@@ -1,7 +1,19 @@
+Always Check That Documentation Is Up-To-Date
+
+Working: Add Block Subclasses that correctly uses that blocks data
+
+Add notes to each item with the wiki URL
 Add Assertions
 Add RegionReader exceptions
-UPDATE DOCS :-(
-Add compiler flag explanaintions
 Support Entities, and TileEntities
-Provide a method for exporting minecraft structures to 3d objects
-Provide a method for extracting the needed textures not all of them
+Rework internal Texture system
+Provide a method for extracting the needed textures, not all of them
+Write Unity splat data as a binary file
+
+
+Long term goal: Provide a method for exporting minecraft structures to 3d objects
+
+Unity: Create an importable assest containing all needed scripts and data for minecraft conversion
++Write a unity script for loading the binary file
+++ Add runtime checks for splat textures and bounds
++Look into creating a higher resolution splat map to lessen the effects of texture fadeing/bleeding
