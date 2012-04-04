@@ -5,7 +5,9 @@ Working: Add Block Subclasses that correctly uses that blocks data
 Add notes to each item with the wiki URL
 Add Assertions
 Add RegionReader exceptions
+Add Door and Bed blocks
 Support Entities, and TileEntities
+Link entity dependant blocks( like the sign and painting) to their corisponding entity
 Rework internal Texture system
 Provide a method for extracting the needed textures, not all of them
 Write Unity splat data as a binary file

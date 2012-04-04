@@ -1,3 +1,84 @@
+04/04/2012 Commit 1: ---------------------------------------------------------------------------------------------------
+        
+    + AnvilTypedBlock
+        
+    + AnvilFluidTypeBlock
+        
+    + AnvilWoodenTypeBlock
+        
+    + WheatSeedsBlock
+        +Added, Growth constants
+        
+    + NetherWartBlock
+        +Added, Size constants
+        
+    + AnvilStemTypeBlock
+        +Added, Growth constants
+        
+    + PumpkinStemBlock
+        
+    + MelonStemBlock
+        
+    + TorchBlock
+        +Added, Orientation constants
+        
+    + AnvilRailTypeBlock
+        +Added, Orientation constants
+        
+    + RailBlock
+        +Added, Orientation constants
+        
+    + PoweredRailBlock
+        
+    + DetectorRailBlock
+        
+    + AnvilStairTypeBlock
+        +Added, Orientation constants
+        
+    + WoodenStairsBlock
+        
+    + CobblestoneStairsBlock
+        
+    + BrickStairsBlock
+        
+    + StoneBrickStairsBlock
+        
+    + NetherBrickStairsBlock
+        
+    + LeverBlock
+        +Added, Orientation constants
+        
+    + ButtonBlock
+        +Added, Orientation constants
+        
+    + SignPostBlock
+        +Added, Orientation constants
+        
+    + AnvilLWFDCTypeBlock
+        +Added, Orientation constants
+        
+    + LadderBlock
+        
+    + WallSignBlock
+        
+    + FurnaceBlock
+        
+    + DispenserBlock
+        
+    + ChestBlock
+        
+    + PressurePlateBlock
+        
+    <General>
+        /Done, Converted all typed blocks to use AnvilTypedBlock
+        
+    Nibble
+        /Bugfix, Added operator overload compare
+
+git commit -m Added: More block type classes. Bugfixes: Nibble can now handle comparison operators'
+
+
+04/03/2012 Commit 2: ---------------------------------------------------------------------------------------------------
         
     + BlockTypeMismatchException
         
@@ -38,6 +119,7 @@
     + Farmland
         +Added, Wetness constants
         
+        
     DataIDs
         -Removed, Wool type constants
         -Removed, Wood type constants
@@ -49,8 +131,10 @@
         
     Nibble
         /BugFix, Added operator overload divide
-        
-04/03/2012 Changes: ---------------------------------------------------------------------------------------------------
+
+git commit -m'Added: Several new block type classes, BlockTypeMismatchException. Bugfixes: Nibble can now handle left-hand divide, Added missing biome. Moved: Several DataIDs constants into the new block type classes'
+
+04/03/2012 Commit 1: ---------------------------------------------------------------------------------------------------
 
     AnvilBlock
         -Removed, mParentSection
@@ -106,9 +190,7 @@
 
 git commit -m 'Bugfixes: Section code can now handle gaps, GetChunkTopo catches BlockNotFoundException. Added: Custom Complier flags, Biome Data, Extended positions. Optimized: GetChunkTopo, GetChunk'
 
-
-
-03/29/12 Changes: -----------------------------------------------------------------------------------------------------
+03/29/12 Commit 1: -----------------------------------------------------------------------------------------------------
 
 RegionReader
         /Done, Load a region file
@@ -198,13 +280,4 @@ RegionReader
         /Done, Convert a region to a heightmap, splatmap script, and texture files. Done~ish.
         /Done, Provide methods for creating the unity script. Done, needs some serious optimization in the output script.
 
-
-
-
-
-
-
-
-
-
-
+git commit -m 'Adding Project Files'
