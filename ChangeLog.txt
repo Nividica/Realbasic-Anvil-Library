@@ -1,3 +1,27 @@
+04/05/2012
+    D Nibble
+        
+    D Position
+    
+    AnvilCoords
+        +Added, Global structure position
+        
+    AnvilSection
+        /Bugfix, Corrected for negative values in block world position( off by 1)
+        
+    NBT
+        /Done, Reduced internal function calls
+        /Bugfix, NBT.ParseChunk is now threadsafe
+        
+    AnvilCompilerFlags
+        +Added, cFlagAnvilPosition
+        
+    <General>
+        /Done, Updated code to use new structure position
+        /Done, Updated code to use byte instead of nibble
+
+git commit -m 'Deprecated: Nibble, Position. Bugfix: NBT is threadsafe, AnvilBlocks world position corrected. Optimized: Overal library speed'
+
 04/04/2012 Commit 1: ---------------------------------------------------------------------------------------------------
         
     + AnvilTypedBlock
